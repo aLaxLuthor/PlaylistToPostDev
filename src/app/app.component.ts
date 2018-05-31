@@ -8,8 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
+  sideNavFixed: string[] = ['Home', 'Connect', 'Services', 'About'];
   events: string[] = [];
   opened: boolean;
-
-  shouldRun = true; //[/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 }

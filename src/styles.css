@@ -3,7 +3,7 @@
 /* This is for bootstrap */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 /* This is included for the sidenav & other material components */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/purple-green.css';
 
 /* deeppurple-amber.css
 indigo-pink.css
