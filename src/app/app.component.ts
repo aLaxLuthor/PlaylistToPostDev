@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,8 @@ export class AppComponent {
   sideNavFixed: string[] = ['Home', 'Connect', 'Services', 'About'];
   events: string[] = [];
   opened: boolean;
+
+  constructor(private route: ActivatedRoute, private router: Router){
+    
+  }
 }

@@ -11,10 +11,18 @@ import { MatSidenavModule,
           MatIconModule, 
           MatButtonModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { ConnectServicesComponent } from './connect-services/connect-services.component';
+import * as firebase from 'firebase';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    HomeComponent,
+    ConnectServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     MatListModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
