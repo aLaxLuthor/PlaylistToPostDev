@@ -11,18 +11,22 @@ import { MatSidenavModule,
           MatIconModule, 
           MatButtonModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+
+import { StoreModule } from '@ngrx/store';
+
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ConnectServicesComponent } from './connect-services/connect-services.component';
-import * as firebase from 'firebase';
+// import * as firebase from 'firebase';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     HomeComponent,
-    ConnectServicesComponent
+    ConnectServicesComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,7 @@ import * as firebase from 'firebase';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    AppRoutingModule
+    StoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
