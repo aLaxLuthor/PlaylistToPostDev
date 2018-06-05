@@ -6,7 +6,7 @@ import { ConnectServicesComponent } from './connect-services/connect-services.co
 import { AboutComponent } from './about/about.component';
 
 
-export const appRoutes: Routes = [
+const appRoutes: Routes = [
     {   path: '', 
         redirectTo: '/home', 
         pathMatch: 'full'},    
@@ -15,21 +15,21 @@ export const appRoutes: Routes = [
     {   path: 'connect', 
         component: ConnectServicesComponent},
     {   path: 'google', 
-        canActivate: [ GoogleConnectedGuard ],
+        // canActivate: [ GoogleConnectedGuard ],
         component: ConnectServicesComponent},
     {   
         path: 'google/albums', 
-        canActivate: [ GoogleConnectedGuard ],
+        // canActivate: [ GoogleConnectedGuard ],
         component: ConnectServicesComponent
     },
     {   
         path: 'google/playlists', 
-        canActivate: [ GoogleConnectedGuard ],
+        // canActivate: [ GoogleConnectedGuard ],
         component: ConnectServicesComponent
     },
     {
         path: 'google/artists',
-        canActivate: [ GoogleConnectedGuard ], 
+        // canActivate: [ GoogleConnectedGuard ], 
         component: ConnectServicesComponent
     },
     {   
@@ -42,10 +42,10 @@ export const appRoutes: Routes = [
     }
 ];
 
-// @NgModule({
-//     imports: [
-//         RouterModule.forRoot(appRoutes)
-//     ],
-//     exports: [RouterModule]
-// })
-// export class AppRoutingModule{}
+@NgModule({
+    imports: [
+        RouterModule.forRoot(appRoutes)
+    ],
+    exports: [RouterModule]
+})
+export class AppRoutingModule{}
