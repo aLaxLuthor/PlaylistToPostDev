@@ -5,10 +5,17 @@
         [routerLink]="{{currItem}}" 
         *ngFor="let currItem of sideNavFixed">{{currItem}}</a> -->
         <a mat-list-item routerLink="./" >Home</a>
-        <a mat-list-item routerLink="/connect" >Connect</a>
-        <a mat-list-item routerLink="/about" >About</a>
+        <a mat-list-item routerLink="/connect" (click)="sidenav.toggle()" >Connect</a>
+        <a mat-list-item routerLink="/youtube" (click)="googleLogin();sidenav.toggle()">YouTube Music</a>
+        <a mat-list-item routerLink="/about" (click)="sidenav.toggle()">About</a>
+    </mat-nav-list>
+    <mat-nav-list>
+        <mat-list-item routerLink="/playlists" (click)="sidenav.toggle()">Playlists</mat-list-item>
+        <mat-list-item routerLink="/albums" (click)="sidenav.toggle()">ALbums</mat-list-item>
+        <mat-list-item routerLink="/artists" (click)="sidenav.toggle()">Artits</mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
+
 
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="example-toolbar">

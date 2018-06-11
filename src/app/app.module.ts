@@ -20,7 +20,12 @@ import { AboutComponent } from './about/about.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ConnectServicesComponent } from './connect-services/connect-services.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthService } from './services/auth.service';
 
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 @NgModule({
   declarations: [
@@ -40,9 +45,12 @@ import { AppRoutingModule } from './app-routing.module';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
